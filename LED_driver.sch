@@ -176,20 +176,6 @@
 <rectangle x1="-2.145" y1="2.24" x2="-1.655" y2="3.34" layer="51"/>
 <smd name="PAD" x="0" y="0" dx="3.3" dy="2.41" layer="1"/>
 </package>
-<package name="MK-R">
-<smd name="A" x="0" y="0" dx="0.7" dy="6.76" layer="1"/>
-<smd name="C" x="6.7" y="0" dx="0.7" dy="6.76" layer="1"/>
-<smd name="EXP" x="3.35" y="0" dx="3.9" dy="6.76" layer="1"/>
-<wire x1="-0.5" y1="-3.5" x2="7.2" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="7.2" y1="-3.5" x2="7.2" y2="3.5" width="0.127" layer="21"/>
-<wire x1="7.2" y1="3.5" x2="-0.5" y2="3.5" width="0.127" layer="21"/>
-<wire x1="-0.5" y1="3.5" x2="-0.5" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="0.7" y1="0.4" x2="0.8" y2="0.4" width="0.127" layer="21"/>
-<wire x1="0.8" y1="0.4" x2="1.2" y2="0" width="0.127" layer="21"/>
-<wire x1="1.2" y1="0" x2="0.8" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="0.8" y1="-0.4" x2="0.7" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="0.7" y1="-0.4" x2="0.7" y2="0.4" width="0.127" layer="21"/>
-</package>
 <package name="SMC">
 <description>&lt;b&gt;DIODE&lt;/b&gt;</description>
 <wire x1="-3.5606" y1="3.105" x2="3.5606" y2="3.105" width="0.1016" layer="21"/>
@@ -260,32 +246,6 @@ Source: http://www.onsemi.com/pub_link/Collateral/MBRA340T3-D.PDF</description>
 <text x="0.254" y="13.208" size="1.27" layer="95">&gt;NAME</text>
 <text x="0.254" y="-2.032" size="1.27" layer="95">&gt;VALUE</text>
 </symbol>
-<symbol name="LED-MK-R">
-<wire x1="2.54" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.778" y1="2.032" x2="0.381" y2="3.429" width="0.1524" layer="94"/>
-<wire x1="0.635" y1="1.905" x2="-0.762" y2="3.302" width="0.1524" layer="94"/>
-<text x="-2.032" y="4.064" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.032" y="6.985" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="C" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="A" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-<polygon width="0.1524" layer="94">
-<vertex x="0.381" y="3.429"/>
-<vertex x="1.27" y="3.048"/>
-<vertex x="0.762" y="2.54"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-0.762" y="3.302"/>
-<vertex x="0.127" y="2.921"/>
-<vertex x="-0.381" y="2.413"/>
-</polygon>
-<pin name="THERMAL" x="2.54" y="-5.08" visible="off" length="short" rot="R90"/>
-<text x="3.048" y="-4.826" size="0.8128" layer="94">THERMAL
-PAD</text>
-</symbol>
 <symbol name="SCHOTTKY">
 <wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
@@ -318,23 +278,6 @@ PAD</text>
 <connect gate="G$1" pin="TON" pad="2"/>
 <connect gate="G$1" pin="VCC" pad="5"/>
 <connect gate="G$1" pin="VIN" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="LED-MK-R">
-<gates>
-<gate name="G$1" symbol="LED-MK-R" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="MK-R">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-<connect gate="G$1" pin="THERMAL" pad="EXP"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11832,6 +11775,45 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="LED_00H53">
+<packages>
+<package name="LED_00H53">
+<smd name="LED-" x="1.4" y="0" dx="0.5" dy="3.3" layer="1"/>
+<smd name="LED+" x="-1.4" y="0" dx="0.5" dy="3.3" layer="1"/>
+<smd name="P$1" x="0" y="0" dx="1.3" dy="3.3" layer="1"/>
+<circle x="-0.9" y="1.35" radius="0.15" width="0.03" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LED_00H53">
+<pin name="LED+" x="-7.62" y="0" length="middle"/>
+<pin name="LED-" x="7.62" y="0" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LED_00H53">
+<gates>
+<gate name="G$1" symbol="LED_00H53" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LED_00H53">
+<connects>
+<connect gate="G$1" pin="LED+" pad="LED+"/>
+<connect gate="G$1" pin="LED-" pad="LED-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11843,7 +11825,6 @@ Source: AVX .. aphvc.pdf</description>
 </classes>
 <parts>
 <part name="U$1" library="BlueRobotics-Main" deviceset="A6211" device=""/>
-<part name="U$2" library="BlueRobotics-Main" deviceset="LED-MK-R" device=""/>
 <part name="D1" library="BlueRobotics-Main" deviceset="DIODE-SCHOTTKY" device="SMA" value="60V 3A"/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R2512" value="0.082 1W"/>
 <part name="C2" library="resistor" deviceset="C-EU" device="C0805" value="0.68uF 100V"/>
@@ -11866,13 +11847,13 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="J8" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="1X02_NO_SILK" package3d_urn="urn:adsk.eagle:package:38051/1"/>
 <part name="J9" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="1X02_NO_SILK" package3d_urn="urn:adsk.eagle:package:38051/1"/>
+<part name="U$3" library="LED_00H53" deviceset="LED_00H53" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="190.5" y="142.24" size="1.778" layer="97">NR8040T100M</text>
 <text x="180.34" y="104.14" size="1.778" layer="97" rot="R90">B360A-13-F</text>
-<text x="226.06" y="101.6" size="1.27" layer="97" rot="R90">MKRAWT-00-0000-0B00H4051</text>
 <text x="168.402" y="107.442" size="1.778" layer="97" rot="R90">Snubber</text>
 <text x="60.96" y="101.6" size="1.778" layer="91" rot="R90">
 399-3797-1-ND
@@ -11880,7 +11861,6 @@ Source: AVX .. aphvc.pdf</description>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="129.54" y="111.76"/>
-<instance part="U$2" gate="G$1" x="236.22" y="106.68" rot="R90"/>
 <instance part="D1" gate="G$1" x="185.42" y="109.22" rot="R90"/>
 <instance part="R1" gate="G$1" x="205.74" y="78.74" rot="R90"/>
 <instance part="C2" gate="G$1" x="205.74" y="109.22"/>
@@ -11909,6 +11889,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="GND4" gate="1" x="83.82" y="76.2"/>
 <instance part="J8" gate="G$1" x="71.12" y="81.28"/>
 <instance part="J9" gate="G$1" x="45.72" y="81.28"/>
+<instance part="U$3" gate="G$1" x="231.14" y="114.3" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -12042,11 +12023,13 @@ Source: AVX .. aphvc.pdf</description>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="132.08" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="132.08" x2="215.9" y2="132.08" width="0.1524" layer="91"/>
 <label x="208.28" y="132.08" size="1.778" layer="95"/>
 <pinref part="U$4" gate="G$1" pin="2"/>
 <wire x1="203.2" y1="132.08" x2="205.74" y2="132.08" width="0.1524" layer="91"/>
 <junction x="205.74" y="132.08"/>
+<pinref part="U$3" gate="G$1" pin="LED+"/>
+<wire x1="205.74" y1="132.08" x2="231.14" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="132.08" x2="231.14" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED-" class="0">
@@ -12055,36 +12038,15 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="205.74" y1="104.14" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="91.44" x2="205.74" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="91.44" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
 <junction x="205.74" y="91.44"/>
 <wire x1="205.74" y1="91.44" x2="121.92" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="91.44" x2="121.92" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="CS"/>
 <wire x1="121.92" y1="114.3" x2="124.46" y2="114.3" width="0.1524" layer="91"/>
 <label x="208.28" y="91.44" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="LED-ISO" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="C"/>
-<wire x1="236.22" y1="104.14" x2="236.22" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="91.44" x2="220.98" y2="91.44" width="0.1524" layer="91"/>
-<label x="220.98" y="91.44" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="LED+ISO" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="A"/>
-<wire x1="236.22" y1="111.76" x2="236.22" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="132.08" x2="220.98" y2="132.08" width="0.1524" layer="91"/>
-<label x="220.98" y="132.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="EXT" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="THERMAL"/>
-<wire x1="241.3" y1="109.22" x2="248.92" y2="109.22" width="0.1524" layer="91"/>
-<label x="243.84" y="109.22" size="1.778" layer="95"/>
+<pinref part="U$3" gate="G$1" pin="LED-"/>
+<wire x1="231.14" y1="106.68" x2="231.14" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC6211" class="0">
