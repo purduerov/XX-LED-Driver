@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.3">
+<eagle version="8.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -188,6 +188,8 @@ Jason King</text>
 <hole x="-3.175" y="1.905" drill="1.27"/>
 <hole x="45.72" y="1.905" drill="1.27"/>
 <hole x="45.72" y="23.495" drill="1.27"/>
+<hole x="39.37" y="23.495" drill="1.27"/>
+<hole x="39.37" y="1.905" drill="1.27"/>
 </plain>
 <libraries>
 <library name="resistor">
@@ -2836,9 +2838,9 @@ design rules under a new name.</description>
 <via x="0.635" y="22.86" extent="1-16" drill="0.6"/>
 <via x="19.685" y="15.875" extent="1-16" drill="0.6"/>
 <via x="25.4" y="15.875" extent="1-16" drill="0.6"/>
-<via x="38.735" y="23.495" extent="1-16" drill="0.6"/>
+<via x="38.1" y="19.05" extent="1-16" drill="0.6"/>
 <via x="39.37" y="16.51" extent="1-16" drill="0.6"/>
-<via x="38.735" y="1.905" extent="1-16" drill="0.6"/>
+<via x="40.005" y="5.08" extent="1-16" drill="0.6"/>
 <via x="40.005" y="8.255" extent="1-16" drill="0.6"/>
 <via x="8.89" y="11.43" extent="1-16" drill="0.6"/>
 <via x="6.35" y="10.16" extent="1-16" drill="0.6"/>
